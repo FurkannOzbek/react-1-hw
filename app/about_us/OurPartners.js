@@ -3,7 +3,7 @@ import styles from "./OurPartners.module.css";
 const OurPartners = () => {
   return (
     <>
-      <div className={styles["logo-container"]}>
+      <div className={styles.logoContainer}>
         <img src="/business_partners/alphabet-logo.png"></img>
         <img src="/business_partners/amazon_logo.png"></img>
         <img src="/business_partners/CBC_Logo_White.png" style={{ marginTop: "-10px" }}></img>

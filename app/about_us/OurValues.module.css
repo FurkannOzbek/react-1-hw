@@ -1,10 +1,10 @@
-.value-containers {
+.valueContainers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px;
 }
-.value-container {
+.valueContainer {
   display: flex;
   flex: 0 1 calc(50% - 20px);
   justify-content: space-around;
@@ -19,18 +19,18 @@
   justify-self: center;
 }
 
-.value-icons {
+.valueIcons {
   height: 50px;
   align-self: center;
   width: 50px;
   margin: 10px;
 }
 
-.value-title {
+.valueTitle {
   align-self: center;
   margin: 5%;
 }
-.value-text {
+.valueText {
   display: flex;
   align-self: center;
   margin: 5%;

@@ -1,11 +1,11 @@
-.crew-p {
+.crewP {
   margin-top: 3rem;
   max-width: 75%;
   font-size: 1rem;
   font-family: "StarJedi", sans-serif;
 }
 
-.crew-cards {
+.crewCards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
@@ -18,7 +18,7 @@
   margin-top: 5rem;
 }
 
-.crew-card {
+.crewCard {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -26,26 +26,26 @@
   flex-direction: column;
   align-items: center;
 }
-.crew-card-h2 {
+.crewCardH2 {
   text-align: center;
   padding-top: 2rem;
 }
-.crew-card-h3 {
+.crewCardH3 {
   padding: 1rem;
   text-align: center;
   font-size: 13px;
 }
-.crew-card-img {
+.crewCardImg {
   width: 200px;
   height: 50%;
 }
-.crew-card-p {
+.crewCardP {
   text-align: center;
   padding-top: 2rem;
   font-size: 14px;
 }
 /* For better visual I put 5.th element to 2nd row 3rd column*/
-.crew-card:nth-child(5) {
+.crewCard:nth-child(5) {
   grid-column: 3 / 4;
   grid-row: 2;
 }
