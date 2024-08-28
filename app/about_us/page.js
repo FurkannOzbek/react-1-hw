@@ -1,42 +1,8 @@
-import styles from './page.module.css';
-
-// TASK - React 1 week 1
-// After you are finished with creating the page, move the OurValues, OurCrew, OurPartners components into their own files
-// OurValues.js, OurCrew.js, OurPartners.js should live in this folder
-// import and use the components from the newly created files
-
-const OurValues = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Values" section
-  // Use the descriptions provided in /app/about_us/README.md
-  // Some inspiration ideas found in /data/inspiration_about_us
-  return (
-    <p> ADD OUR VALUES HERE </p>
-  );
-};
-
-const OurCrew = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Crew section"
-  // Use the descriptions provided in /app/about_us/README.md
-  // Use the pictures from /public/crew
-  // Some inspiration ideas found in /data/inspiration_about_us
-  return (
-    <p> ADD OUR CREW HERE </p>
-  );
-}
-
-const OurPartners = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Crew section"
-  // Use the descriptions provided in /app/about_us/README.md
-  // Use the pictures from /public/crew
-  // Some inspiration ideas found in /data/inspiration_about_us
-  return (
-    <p> ADD OUR Partners HERE </p>
-  );
-}
-
+import styles from "./page.module.css";
+import OurValues from "./OurValues.js";
+import OurCrew from "./OurCrew.js";
+import OurPartners from "./OurPartners.js";
+import OurMission from "./OurMission.js";
 
 export const Crew = () => {
   return (
@@ -44,19 +10,36 @@ export const Crew = () => {
       <main className="mainContent">
         <h1>About us</h1>
         <section className="card">
-          <h2>Our Values</h2>
-          <OurValues/>
+          <div className="card-title">
+            <img className={styles.titleIcons} alt="" src="/icons/mission.png"></img>
+            <h2>Our Mission</h2>
+          </div>
+          <OurMission />
         </section>
         <section className="card">
-          <h2>The crew</h2>
-          <OurCrew/>
+          <div className="card-title">
+            <img className={styles.titleIcons} alt="" src="/icons/value.png"></img>{" "}
+            <h2>Our Values</h2>
+          </div>
+          <OurValues />
         </section>
-
-         {/* TASK - React 1 week 1 */}
-         {/* Add in the "OurPartners" component here */}
+        <section className="card">
+          <div className="card-title">
+            <img className={styles.titleIcons} alt="" src="/icons/crew.png"></img>
+            <h2>Our Crew</h2>
+          </div>
+          <OurCrew />
+        </section>
+        <section className="card">
+          <div className="card-title">
+            <img className={styles.titleIcons} alt="" src="/icons/partners.png"></img>
+            <h2>Our Partners</h2>
+          </div>
+          <OurPartners />
+        </section>
       </main>
     </div>
   );
-}
+};
 
 export default Crew;

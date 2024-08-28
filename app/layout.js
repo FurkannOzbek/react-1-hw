@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 
@@ -17,12 +16,10 @@ export const RootLayout = ({ children }) => {
       <body className={inter.className}>
         <Navbar />
         {children}
-        {/* TASK - React 1 week 1 */}
-        {/* Import and use the Footer component here */}
-        {/* Footer found in the ui/Footer.js folder */}
+        <Footer />
       </body>
     </html>
   );
-}
+};
 
 export default RootLayout;

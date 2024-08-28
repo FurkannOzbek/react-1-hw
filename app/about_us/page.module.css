@@ -3,3 +3,8 @@
   width: 100vw;
   height: 100vh;
 }
+.titleIcons {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.75rem;
+}
