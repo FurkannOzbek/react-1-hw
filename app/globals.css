@@ -221,9 +221,3 @@ button {
 .fullBGpicture > main {
   overflow: auto;
 }
-
-.title-icons {
-  height: 2rem;
-  width: 2rem;
-  margin-right: 0.75rem;
-}
