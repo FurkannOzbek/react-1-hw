@@ -11,27 +11,28 @@ export const Crew = () => {
         <h1>About us</h1>
         <section className="card">
           <div className="card-title">
-            <img className={styles.titleIcons} src="/icons/mission.png"></img>
+            <img className={styles.titleIcons} alt="" src="/icons/mission.png"></img>
             <h2>Our Mission</h2>
           </div>
           <OurMission />
         </section>
         <section className="card">
           <div className="card-title">
-            <img className={styles.titleIcons} src="/icons/value.png"></img> <h2>Our Values</h2>
+            <img className={styles.titleIcons} alt="" src="/icons/value.png"></img>{" "}
+            <h2>Our Values</h2>
           </div>
           <OurValues />
         </section>
         <section className="card">
           <div className="card-title">
-            <img className={styles.titleIcons} src="/icons/crew.png"></img>
+            <img className={styles.titleIcons} alt="" src="/icons/crew.png"></img>
             <h2>Our Crew</h2>
           </div>
           <OurCrew />
         </section>
         <section className="card">
           <div className="card-title">
-            <img className={styles.titleIcons} src="/icons/partners.png"></img>
+            <img className={styles.titleIcons} alt="" src="/icons/partners.png"></img>
             <h2>Our Partners</h2>
           </div>
           <OurPartners />
