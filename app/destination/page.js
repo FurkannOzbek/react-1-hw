@@ -61,6 +61,7 @@ export const Destinations = () => {
         <h1>Travel destinations</h1>
         <section className="card">
           <h2>Wishlist</h2>
+
           {numberOfPlanets === 0 ? (
             <p>No planets in wishlist :(</p>
           ) : (
