@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import styles from "@/components/destination/destination.module.css";
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
-import { PlanetWishlistItem } from "./PlanetWishListItem";
+import { PlanetWishlistItem } from "./PlanetWishlistItem";
 import { Tulpen_One } from "next/font/google";
 import { PlanetCard } from "./PlanetCard";
 
@@ -55,6 +55,10 @@ export const Destinations = () => {
   const numberOfPlanets = selectedPlanets.length;
   const checkIfIssSelected = (name) => selectedPlanets.includes(name);
 
+  const removeFromWishlist = (name) => {
+    setSelectedPlanets((prevSelected) => prevSelected.filter((planet) => planet !== name));
+  };
+
   return (
     <div className="fullBGpicture">
       <main className="mainContent">
@@ -69,28 +73,31 @@ export const Destinations = () => {
           )}
 
           <b>List coming soon after lesson 3!</b>
+
           {/* STOP! - this is for week 3!*/}
           {/* TASK - React 1 week 3 */}
           {/* Import the AddWishlistItem react component */}
-          {/* <AddWishlistItem /> */}
+          <AddWishlistItem />
+          {console.log(selectedPlanets)}
           {/* TASK - React 1 week 3 */}
           {/* Convert the list, so it is using selectedPlanets.map() to display the items  */}
           {/* Implement the "REMOVE" function */}
           {/* uncomment the following code snippet: */}
-          {/* 
+
           <h3>Your current wishlist</h3>
           <div className={styles.wishlistList}>
-            <PlanetWishlistItem 
-              name="europa"
-              onRemove={() => removeFromWishlist('europa')}
-              thumbnail="/destination/image-europa.png"
-            />
-            <PlanetWishlistItem 
-              name="europa"
-              onRemove={() => removeFromWishlist('europa')}
-              thumbnail="/destination/image-europa.png"
-            />
-          </div> */}
+            {selectedPlanets.map((planetName) => {
+              const planet = planets.find((p) => p.name === planetName);
+              return (
+                <PlanetWishlistItem
+                  key={planet.name}
+                  name={planet.name}
+                  onRemove={() => removeFromWishlist(planetName)}
+                  thumbnail={planet.thumbnail}
+                />
+              );
+            })}
+          </div>
         </section>
         <section className="card">
           <h2>Possible destinations</h2>
