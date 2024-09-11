@@ -94,35 +94,16 @@ export const Destinations = () => {
         </section>
         <section className="card">
           <h2>Possible destinations</h2>
-
-          <PlanetCard
-            name={planets[0].name}
-            description={planets[0].description}
-            thumbnail={planets[0].thumbnail}
-            isSelected={checkIfIssSelected(planets[0].name)}
-            onAddOrRemovePlanet={onAddOrRemovePlanet}
-          />
-          <PlanetCard
-            name={planets[1].name}
-            description={planets[1].description}
-            thumbnail={planets[1].thumbnail}
-            isSelected={checkIfIssSelected(planets[1].name)}
-            onAddOrRemovePlanet={onAddOrRemovePlanet}
-          />
-          <PlanetCard
-            name={planets[2].name}
-            description={planets[2].description}
-            thumbnail={planets[2].thumbnail}
-            isSelected={checkIfIssSelected(planets[2].name)}
-            onAddOrRemovePlanet={onAddOrRemovePlanet}
-          />
-          <PlanetCard
-            name={planets[3].name}
-            description={planets[3].description}
-            thumbnail={planets[3].thumbnail}
-            isSelected={checkIfIssSelected(planets[3].name)}
-            onAddOrRemovePlanet={onAddOrRemovePlanet}
-          />
+          {planets.map((planet) => (
+            <PlanetCard
+              key={planet.name}
+              name={planet.name}
+              description={planet.description}
+              thumbnail={planet.thumbnail}
+              isSelected={checkIfIssSelected(planet.name)}
+              onAddOrRemovePlanet={onAddOrRemovePlanet}
+            />
+          ))}
         </section>
       </main>
     </div>
