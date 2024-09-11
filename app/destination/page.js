@@ -53,7 +53,7 @@ export const Destinations = () => {
   };
 
   const numberOfPlanets = selectedPlanets.length;
-  const isSelected = (name) => selectedPlanets.includes(name);
+  const checkIfIssSelected = (name) => selectedPlanets.includes(name);
 
   return (
     <div className="fullBGpicture">
@@ -96,31 +96,31 @@ export const Destinations = () => {
           <h2>Possible destinations</h2>
 
           <PlanetCard
-            name={Planets[0].name}
-            description={Planets[0].description}
-            thumbnail={Planets[0].thumbnail}
-            isSelected={isSelected(Planets[0].name)}
+            name={planets[0].name}
+            description={planets[0].description}
+            thumbnail={planets[0].thumbnail}
+            isSelected={checkIfIssSelected(planets[0].name)}
             onAddOrRemovePlanet={onAddOrRemovePlanet}
           />
           <PlanetCard
-            name={Planets[1].name}
-            description={Planets[1].description}
-            thumbnail={Planets[1].thumbnail}
-            isSelected={isSelected(Planets[1].name)}
+            name={planets[1].name}
+            description={planets[1].description}
+            thumbnail={planets[1].thumbnail}
+            isSelected={checkIfIssSelected(planets[1].name)}
             onAddOrRemovePlanet={onAddOrRemovePlanet}
           />
           <PlanetCard
-            name={Planets[2].name}
-            description={Planets[2].description}
-            thumbnail={Planets[2].thumbnail}
-            isSelected={isSelected(Planets[2].name)}
+            name={planets[2].name}
+            description={planets[2].description}
+            thumbnail={planets[2].thumbnail}
+            isSelected={checkIfIssSelected(planets[2].name)}
             onAddOrRemovePlanet={onAddOrRemovePlanet}
           />
           <PlanetCard
-            name={Planets[3].name}
-            description={Planets[3].description}
-            thumbnail={Planets[3].thumbnail}
-            isSelected={isSelected(Planets[3].name)}
+            name={planets[3].name}
+            description={planets[3].description}
+            thumbnail={planets[3].thumbnail}
+            isSelected={checkIfIssSelected(planets[3].name)}
             onAddOrRemovePlanet={onAddOrRemovePlanet}
           />
         </section>
