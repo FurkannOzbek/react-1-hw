@@ -8,7 +8,7 @@ import { PlanetWishlistItem } from "./PlanetWishListItem";
 import { Tulpen_One } from "next/font/google";
 import { PlanetCard } from "./PlanetCard";
 
-const Planets = [
+const planets = [
   {
     name: "EUROPA",
     description:
