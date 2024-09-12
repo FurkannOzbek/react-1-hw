@@ -4,9 +4,49 @@
   height: 100vh;
 }
 
-
 .nasaPicOfTheDayImg {
   width: auto;
   height: 400px;
+}
 
+.cardTitle {
+  margin: 2rem;
+  text-align: center;
+}
+.podImg {
+  display: block;
+  margin: auto;
+  height: 900px;
+  width: 1200;
+}
+
+.card {
+  position: relative;
+  padding: var(--spacing-12);
+  margin: var(--spacing-16);
+  padding: 1.5rem;
+  border-radius: 25px;
+}
+
+.card::before {
+  background-color: var(--card-bg-color);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+}
+
+.card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.imgTitle {
+  margin: 2rem 0 0 7rem;
+}
+.imgDescription {
+  margin: 1rem 7rem 1rem 7rem;
 }
