@@ -2,10 +2,10 @@ import styles from "./page.module.css";
 
 export const RoverPhoto = ({ src, date, roverName }) => {
   return (
-    <>
-      <p>Date {date}</p>
-      <img className={styles.nasaPicOfTheDayImg} src={src} alt=""></img>
-      <p>{roverName}</p>
-    </>
+    <div className={styles.roverCard}>
+      <p>Date: {date}</p>
+      <img className={styles.roverImg} src={src} alt={`Rover photo taken on ${date}`} />
+      <p>Rover: {roverName}</p>
+    </div>
   );
 };

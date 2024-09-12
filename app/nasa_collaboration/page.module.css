@@ -20,33 +20,34 @@
   width: 1200;
 }
 
-.card {
-  position: relative;
-  padding: var(--spacing-12);
-  margin: var(--spacing-16);
-  padding: 1.5rem;
-  border-radius: 25px;
-}
-
-.card::before {
-  background-color: var(--card-bg-color);
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  backdrop-filter: blur(10px);
-}
-
-.card > * {
-  position: relative;
-  z-index: 2;
-}
-
 .imgTitle {
   margin: 2rem 0 0 7rem;
 }
 .imgDescription {
   margin: 1rem 7rem 1rem 7rem;
+}
+
+.card {
+  margin: 2rem;
+}
+
+.roverCard {
+  padding: 4rem;
+}
+
+.roverGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.roverImg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.roverHeader {
+  margin-bottom: 1rem;
+  text-align: center;
 }

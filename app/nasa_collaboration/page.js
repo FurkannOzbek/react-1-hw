@@ -39,24 +39,27 @@ export const NasaCollaboration = () => {
     <div className="fullBGpicture">
       <main className="mainContent">
         <h1>Collaboration with NASA</h1>
-        <section className={styles.card}>
+        <section className="card">
           <h2 className={styles.cardTitle}>Astronomy Picture of the day</h2>
 
           <img className={styles.podImg} src={dailyImg?.url} />
           <h2 className={styles.imgTitle}> {dailyImg?.title}</h2>
           <p className={styles.imgDescription}> {dailyImg?.explanation}</p>
         </section>
-        <section className="card">
-          <h2>Rover Photos</h2>
+        <section className={`card ${styles.roverCard}`}>
+          <h2 className={styles.roverHeader}>Rover Photos</h2>
           {roverPhoto?.photos?.length ? (
-            roverPhoto.photos.map((photo) => (
-              <RoverPhoto
-                key={photo.id}
-                src={photo.img_src}
-                date={photo.earth_date}
-                roverName={photo.rover.name}
-              />
-            ))
+            <div className={styles.roverGrid}>
+              {roverPhoto.photos.map((photo) => (
+                <RoverPhoto
+                  key={photo.id}
+                  src={photo.img_src}
+                  date={photo.earth_date}
+                  roverName={photo.rover.name}
+                  className={styles.roverImg}
+                />
+              ))}
+            </div>
           ) : (
             <p>Loading rover photos...</p>
           )}
