@@ -16,13 +16,14 @@ export const NasaCollaboration = () => {
   const [roverPhoto, setRoverPhoto] = useState({});
 
   useEffect(() => {
+    // Function to fetch Mars rover photos
     const fetchRoverPhotos = async () => {
       const roverPhotoResponse = await fetch(NASA_URLs.marsRoverPhoto).then((response) =>
         response.json()
       );
       setRoverPhoto(roverPhotoResponse);
     };
-
+    // Function to fetch Astronomy Picture of the Day
     const fetchPicOfTheDay = async () => {
       const picOfTheDayResponse = await fetch(NASA_URLs.astronomyPicOfTheDay).then((response) =>
         response.json()
