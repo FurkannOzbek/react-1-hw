@@ -1,39 +1,31 @@
-"use client";
-
 import { useState } from "react";
 import styles from "./destination.module.css";
 
-export const AddWishlistItem = ({ onAddWishlistItem }) => {
-  const [thumbnail, onThumbnailChange] = useState("/destination/image-europa.png");
-  const [name, inputPlanetName] = useState("");
-  // TASK - React 1 week 3
-  // 1. Add a useState for the handling the <input id="customWishlist" type="text" />
-  // 2. Connect the onThumbnailChange to the <select>
+export const AddWishlistItem = ({ onAddCustomPlanet }) => {
+  const [thumbnail, setThumbnail] = useState("/destination/image-europa.png");
+  const [name, setInputPlanetName] = useState("");
+
   const inputHandler = (e) => {
-    inputPlanetName(e.target.value);
-    console.log(name);
+    setInputPlanetName(e.target.value.toUpperCase());
   };
+
   const selectHandler = (e) => {
-    onThumbnailChange(e.target.value);
-    console.log(thumbnail);
+    setThumbnail(e.target.value);
   };
 
   const onAddItemPressed = () => {
-    // TASK - React 1 week 3
-    // implement this function
-    // Clear the <input/> field on button press
-    // pass the thumbnail and the name from the input to the onAddWishlistItem function
-    // call the onAddWishlistItem here
-    console.log("button works");
+    onAddCustomPlanet(name, thumbnail);
+    setInputPlanetName("");
+    setThumbnail("/destination/image-europa.png");
   };
 
   return (
     <div className={styles.addWishlistItem}>
       <p>Add custom planet to wishlist</p>
       <label htmlFor="customWishlist">Wishlist item name</label>
-      <input id="customWishlist" type="text" onChange={inputHandler} />
+      <input id="customWishlist" type="text" value={name} onChange={inputHandler} />
       <label htmlFor="customWishlistThumbnail">Wishlist item thumbnail</label>
-      <select id="customWishlistThumbnail" onChange={selectHandler}>
+      <select id="customWishlistThumbnail" value={thumbnail} onChange={selectHandler}>
         <option value="/destination/image-europa.png">EUROPA</option>
         <option value="/destination/image-mars.png">MARS</option>
         <option value="/destination/image-moon.png">MOON</option>
@@ -43,5 +35,3 @@ export const AddWishlistItem = ({ onAddWishlistItem }) => {
     </div>
   );
 };
-
-/* self note : dont forget to delete all console.logs for test*/
