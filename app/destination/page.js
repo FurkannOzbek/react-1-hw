@@ -81,7 +81,7 @@ export const Destinations = () => {
               <PlanetWishlistItem
                 key={planetName.name}
                 name={planetName.name}
-                onRemove={() => removeFromWishlist(planet.name)}
+                onRemove={() => removeFromWishlist(planetName.name)}
                 thumbnail={planetName.thumbnail}
               />
             ))}
